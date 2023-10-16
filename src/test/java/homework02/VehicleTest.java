@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class VehicleTest {
 
     @Test //  - проверка того, что экземпляр объекта Car также является экземпляром транспортного средства; (instanceof)
-    public void carIsInstanceofVehicle() {
+    public void carIsInstanceOfVehicle() {
         Car car = new Car("Nissan", "Qashqai", 2020);
         assertEquals(car.getClass().getSuperclass().getTypeName(), Vehicle.class.getName());
     }
@@ -28,14 +28,14 @@ class VehicleTest {
     }
 
     @Test //  - проверка того, объект Car развивает скорость 60 в режиме тестового вождения (testDrive())
-    public void carReachesSpeedOfSixtyInTestDribenMode () {
+    public void carReachesSpeedOfSixtyInTestDrivenMode () {
         Car car = new Car("Nissan", "Qashqai", 2020);
         car.testDrive();
         assertEquals(car.getSpeed(), 60);
     }
 
     @Test //  - проверка того, объект Motorcycle развивает скорость 75 в режиме тестового вождения (testDrive())
-    public void motorcycleReachesSpeedOfSeventyFiveInTestDribenMode () {
+    public void motorcycleReachesSpeedOfSeventyFiveInTestDrivenMode () {
         Motorcycle motorcycle = new Motorcycle("Honda", "Moto", 2020);
         motorcycle.testDrive();
         assertEquals(motorcycle.getSpeed(), 75);
